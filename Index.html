@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOOM BET</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">BOOM BET</div>
+
+  <nav>
+    <button onclick="show('home')">Início</button>
+    <button onclick="show('dashboard')">Painel</button>
+    <button onclick="show('signupPage')">Criar conta</button>
+    <button onclick="show('loginPage')">Entrar</button>
+  </nav>
+</header>
+
+<main>
+
+  <!-- INÍCIO -->
+  <section id="home" class="page active">
+    <div class="hero">
+      <h1>BOOM BET</h1>
+      <h2>Portal de gestão</h2>
+
+      <p>
+        Bem-vindo ao portal demonstrativo da BOOM BET.
+      </p>
+
+      <div class="actions">
+        <button onclick="show('signupPage')">
+          Criar conta
+        </button>
+
+        <button class="secondary" onclick="show('loginPage')">
+          Entrar
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CRIAR CONTA -->
+  <section id="signupPage" class="page">
+
+    <div class="card">
+
+      <h2>Criar conta</h2>
+
+      <input
+        id="name"
+        type="text"
+        placeholder="Nome"
+      >
+
+      <input
+        id="pass"
+        type="password"
+        placeholder="Palavra-passe"
+      >
+
+      <input
+        id="pass2"
+        type="password"
+        placeholder="Confirmar palavra-passe"
+      >
+
+      <label>
+        <input id="terms" type="checkbox">
+        Aceito os termos
+      </label>
+
+      <button onclick="signup()">
+        Criar conta
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- LOGIN -->
+  <section id="loginPage" class="page">
+
+    <div class="card">
+
+      <h2>Entrar</h2>
+
+      <input
+        type="text"
+        placeholder="Utilizador ou e-mail"
+      >
+
+      <input
+        type="password"
+        placeholder="Palavra-passe"
+      >
+
+      <button onclick="login()">
+        Entrar
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- PAINEL -->
+  <section id="dashboard" class="page">
+
+    <div class="card">
+
+      <h2>Painel BOOM BET</h2>
+
+      <div class="balance">
+        <span>Saldo demonstrativo</span>
+        <strong id="balance">0 Kz</strong>
+      </div>
+
+      <div class="grid">
+
+        <button onclick="show('depositPage')">
+          Depositar
+        </button>
+
+        <button onclick="show('withdrawPage')">
+          Levantar
+        </button>
+
+        <button onclick="demo('Histórico')">
+          Histórico
+        </button>
+
+        <button onclick="demo('Perfil')">
+          Perfil
+        </button>
+
+      </div>
+
+      <p class="notice">
+        Esta é uma versão de demonstração.
+        Nenhuma operação financeira real é processada.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- DEPÓSITO -->
+  <section id="depositPage" class="page">
+
+    <div class="card">
+
+      <h2>Depósito</h2>
+
+      <input
+        id="dep"
+        type="number"
+        min="1"
+        placeholder="Valor em Kz"
+      >
+
+      <button onclick="deposit()">
+        Enviar pedido
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- LEVANTAMENTO -->
+  <section id="withdrawPage" class="page">
+
+    <div class="card">
+
+      <h2>Levantamento</h2>
+
+      <input
+        id="wd"
+        type="number"
+        min="1"
+        placeholder="Valor em Kz"
+      >
+
+      <button onclick="withdraw()">
+        Enviar pedido
+      </button>
+
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>BOOM BET</p>
+  <p>Portal demonstrativo</p>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
